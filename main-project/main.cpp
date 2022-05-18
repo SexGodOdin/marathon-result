@@ -1,4 +1,5 @@
 #include <iostream>
+#include <iomanip>
 
 using namespace std;
 
@@ -17,19 +18,23 @@ int main()
 	try
 	{
 		read("data.txt", results, size);
+		cout << "Результаты марафона\n\n";
 		for (int i = 0; i < size; i++)
 		{
 			cout << results[i]->ucastnik.umber << '\n';
-			cout << results[i]->ucastnik.last_name << '\n';
-			cout << results[i]->ucastnik.first_name << '\n';
-			cout << results[i]->ucastnik.middle_name << '\n';
-			cout << results[i]->finish.hour << ' ';
-			cout << results[i]->finish.minut << ' ';
-			cout << results[i]->finish.second << '\n';
-			cout << results[i]->start.hour << ' ';
-			cout << results[i]->start.minut << ' ';
-			cout << results[i]->start.second << '\n';
-			cout << results[i]->club << '\n';
+			cout << results[i]->ucastnik.last_name << " ";
+			cout << results[i]->ucastnik.first_name[0] << ". ";
+			cout << results[i]->ucastnik.middle_name[0] << ".";
+			cout << '\n';
+			cout << setw(2) << setfill('0') << results[i]->start.hour << ':';
+			cout << setw(2) << setfill('0') << results[i]->start.minut << ':';
+			cout << setw(2) << setfill('0') << results[i]->start.second;
+			cout << '\n';
+			cout << setw(2) << setfill('0') << results[i]->finish.hour << ':';
+			cout << setw(2) << setfill('0') << results[i]->finish.minut << ':';
+			cout << setw(2) << setfill('0') << results[i]->finish.second;
+			cout << ", ";
+			cout << ' ' << results[i]->club;
 			cout << '\n';
 		}
 		for (int i = 0; i < size; i++)
