@@ -12,7 +12,8 @@ int main()
 	setlocale(LC_ALL, "Russian");
 	cout << "Лабораторная работа №1. GIT\n";
 	cout << "Вариант №1. Результаты марафона\n";
-	cout << "Автор: Вадим Макаров\n\n";
+	cout << "Автор: Вадим Макаров\n";
+	cout << "Группа: 14з\n\n";
 	book_result* results[MAX_FILE_ROWS_COUNT];
 	int size;
 	try
@@ -46,5 +47,9 @@ int main()
 	{
 		cout << error << '\n';
 	}
+	cout << "Laboratory work #1. GIT\n";
+	cout << "Variant #1. Marathon of results\n";
+	cout << "Author: Vadim Makarov\n";
+	cout << "Group: 14h\n";
 	return 0;
 }
